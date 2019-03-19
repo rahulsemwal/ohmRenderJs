@@ -106,7 +106,7 @@ UIengine3 = function(tpl, obj, cb) {
     // return tpl;
 }
 
-UIengine3('{{this[0]}}{{this[1]}}<p>Hi, my name"s is {{name}}, and my age is {{age}}, living in {{address.street}}.</p>', {
+/*UIengine3('{{this[0]}}{{this[1]}}<p>Hi, my name"s is {{name}}, and my age is {{age}}, living in {{address.street}}.</p>', {
     '0': 'first',
     '1': 'two',
     name: "rahul",
@@ -114,7 +114,7 @@ UIengine3('{{this[0]}}{{this[1]}}<p>Hi, my name"s is {{name}}, and my age is {{a
     address: {
         street: 'Noida lan no 1'
     }
-});
+});*/
 
 
 /*@DOC:By different method
@@ -161,7 +161,7 @@ UIengine4 = function(tpl, obj, cb) {
     // return tpl;
 }
 
-UIengine4('<p>Hi, my name"s is <%this.name%>, and my age is <%this.age%>, living in <%this.address.street%>.</p><%for(var i = 0; i<this.degree.length; i++){%><p>HOLLA</p><%}%>', {
+UIengine4('<p>Hi, my name"s is <%this.name%>, and my age is <%this.age%>, living in <%this.address.street%>.</p><%for(var i = 0; i<this.degree.length; i++){%><p><%this.degree[i]%></p><%}%>', {
     name: "rahul",
     age: 23,
     address: {
@@ -169,3 +169,4 @@ UIengine4('<p>Hi, my name"s is <%this.name%>, and my age is <%this.age%>, living
     },
     degree: ['BCA', 'MCA']
 });
+
