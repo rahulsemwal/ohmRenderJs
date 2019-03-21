@@ -15,9 +15,12 @@
     <script id="list2" type="text/html">
       <p>Hi, my name is <%this.name%>, and my age is <%this.age%>, living in <%this.address.street%>.
       </p>
+      <p>My degrees are:</p>
+      <ul>
       <%for(var i = 0; i<this.degree.length; i++){%>
-        <p><%this.degree[i]%></p>
+        <li><%this.degree[i]%></li>
       <%}%>
+    </ul>
     </script>
     <script type="text/javascript" src="js/main.js"></script>
   </body>

@@ -1,6 +1,6 @@
 /*MAIN-JS*/
-function initApp() {debugger;
-	
+function initApp() {
+
     // var data = {name:"Rahul",age:28,address:"Noida"};
     var data = {
         name: "rahul",
