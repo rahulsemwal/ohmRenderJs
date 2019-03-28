@@ -11,9 +11,25 @@ function initApp() {
         degree: ['BCA', 'MCA']
     }
     var markup = document.getElementById("list2").innerHTML;
-    var parsedMarkup = UIengine4(markup, data, function(r) {});
+    // var parsedMarkup = UIengine4(markup, data, function(r) {});
+    var parsedMarkup = UIengine5(markup, function(r) {});
     var placeholder = document.getElementsByClassName("page");
-    placeholder[0].innerHTML = parsedMarkup;
+    // placeholder[0].innerHTML = parsedMarkup;
+    placeholder[0].innerHTML = parsedMarkup(data);
+
+    //Next level
+    data = {
+        name: "Kunal",
+        age: 23,
+        address: {
+            street: 'Noida lan no 1'
+        },
+        degree: ['BCA', 'MSC']
+    }
+    markup = document.getElementById("list3").innerHTML;
+    parsedMarkup = UIengine5(markup, function(r) {});
+    document.getElementsByClassName("page")[0].insertAdjacentHTML('afterend', parsedMarkup(data));
+
 }
 
 window.document.onreadystatechange = function() {
