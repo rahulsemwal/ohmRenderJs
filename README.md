@@ -8,10 +8,11 @@ what are we doing here, just wanting to create a compiler kind of stuff who can 
   - Understand all about DOM with noscript disable
   - Understand All about DOM with noscript enabled
   - Understand Window.document
+  - Understand new DOM concept of web from W3c, so that we can code with updated concept of DOM and browsers.
   - Find a best pattern and ideation to create a flexible javascript library
   - First Goal: Implement vanilla javascript for JavaScript lovers which include data binding, event handling, minification and security. 
   - Build core library in vanilla javascript
-  - Second Goal: Think to extend towards modern way to build a successive library 
+  - Second Goal: Think to extend towards modern way to build a progressive library 
   - Third Goal: Think to extend a modern Javascript towards a framework which include CSR+SSR, PWA, SEO, Routing, etc
 
 # Extra ordinary
