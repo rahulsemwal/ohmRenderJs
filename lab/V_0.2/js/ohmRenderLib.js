@@ -1101,7 +1101,7 @@ UIengine = function(tpl, cb) {
     }
     return runCode(code);
 }
-/*UIengine('<p>Hi, my name"s is <%this.name%>, and my age is <%this.age%>, living in <%this.address.street%>.</p><%for(var i = 0; i<this.degree.length; i++){%><p><%this.degree[i]%></p><%}%>', {
+/*UIengine5('<p>Hi, my name"s is <%this.name%>, and my age is <%this.age%>, living in <%this.address.street%>.</p><%for(var i = 0; i<this.degree.length; i++){%><p><%this.degree[i]%></p><%}%>', {
     name: "rahul",
     age: 23,
     address: {

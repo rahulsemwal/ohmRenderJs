@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <style></style>
+    <script type="text/javascript" src="js/ohmRenderLib.js"></script>
+  </head>
+  <body>
+    <H1>This example taken from lib folder</H1>
+    <div class="page">
+
+    </div>
+
+
+    <script id="list" type="text/html">
+    	<p>Hi, my name is {{name}}, and my age is {{age}}, living in {{address}}.</p> 
+    </script>
+    <script id="list2" type="text/html">
+      <p><small>Test case1:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>></small></p>
+      <p>Hi, my name is <%this.name%>, and my age is <%this.age%>, living in <%this.address.street%>.
+      </p>
+      <p>My degrees are:</p>
+      <ul>
+      <%for(var i = 0; i<this.degree.length; i++){%>
+        <li><%this.degree[i]%></li>
+      <%}%>
+    </ul>
+    </script>
+    <script id="list3" type="text/html">
+      <p><small>Test case2:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>></small></p>
+      <p>My degrees are:</p>
+      <ul>
+      <%for(var i = 0; i<this.degree.length; i++){%>
+        <li><%this.degree[i]%></li>
+      <%}%>
+      </ul>
+      <p>Hi, my name is <%this.name%>, and my age is <%this.age%>, living in <%this.address.street%>.
+      </p>
+    </script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
