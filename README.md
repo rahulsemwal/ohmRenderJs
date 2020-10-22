@@ -13,11 +13,9 @@ what are we doing here, just wanting to create a compiler kind of stuff who can 
 Examples for particular versions are availble in "example folder", please have a look into those, execute these in your way and try to understand the flow.
 
 # How to contribute
-**1:** Welcoming your all suggestions and feedbacks, right now our preferable channel is github. 
-
-**2:** Take a fork of above code base, execute it in your way, raise confusions & bugs, add your logic and create a pull request, then I wil review it and merge it accordingly. simple!! tada.
-
-**3:** Any confusion, drop a comment or create a defect here, We will solve it :).
+  - Welcoming your all suggestions and feedbacks, right now our preferable channel is github. 
+  - Take a fork of above code base, execute it in your way, raise confusions & bugs, add your logic and create a pull request, then I wil review it and merge it accordingly. simple!! tada.
+  - Any confusion, drop a comment or create a defect here, we will solve it :).
 
 # Way of going
   - Understand all about DOM with noscript disable
