@@ -10,7 +10,7 @@ what are we doing here, just wanting to create a compiler kind of stuff who can 
 **For Contributors:** If you have a passion to innovate or learn JS library so please contribute in our lab section, version wise code available in "lab" folder. Have a look at least :).
 
 # Examples [Most important!!]
-Examples for particular versions are availble in "example folder", please have a look into those, execute these in your way and try to understand the flow.
+Examples for particular versions are availble in "example" folder, please have a look into those, execute these in your way and try to understand the flow.
 
 # How to contribute
   - Welcoming your all suggestions and feedbacks, right now our preferable channel is github. 
