@@ -5,17 +5,19 @@ It is an open source "Javascript Template Engine Library" based upon fast HTML r
 what are we doing here, just wanting to create a compiler kind of stuff who can manage and convert raw input into something human understandable things.
 
 # Usage
-*For Library users:* Please choose an appropriate version of JS library from "lib" folder.
+**For Library users:** Please choose an appropriate version of JS library from "lib" folder.
 
-*For Contributors:* If you have a passion to innovate or learn JS library so please contribute in our lab section, version wise code available in "lab" folder. Have a look at least :).
+**For Contributors:** If you have a passion to innovate or learn JS library so please contribute in our lab section, version wise code available in "lab" folder. Have a look at least :).
 
 # Examples [Most important!!]
 Examples for particular versions are availble in "example folder", please have a look into those, execute these in your way and try to understand the flow.
 
 # How to contribute
-*1:* Welcoming your all suggestions and feedbacks, right now our preferable channel is github. 
-*2:* Take a fork of above code base, execute it in your way, raise confusions & bugs, add your logic and create a pull request, then I wil review it and merge it accordingly. simple!! tada.
-*3:* Any confusion, drop a comment or create a defect here, We will solve it :).
+**1:** Welcoming your all suggestions and feedbacks, right now our preferable channel is github. 
+
+**2:** Take a fork of above code base, execute it in your way, raise confusions & bugs, add your logic and create a pull request, then I wil review it and merge it accordingly. simple!! tada.
+
+**3:** Any confusion, drop a comment or create a defect here, We will solve it :).
 
 # Way of going
   - Understand all about DOM with noscript disable
