@@ -1057,9 +1057,13 @@ UIengine4 = function(tpl, obj, cb) {
     },
     degree: ['BCA', 'MCA']
 });*/
-/*@DOC:By different method
- **@LEVEL-5:Suport for complex object DS like {name:'rahul',age:23,address:{street:'Noida Lan 1'},degree:['BCA','MCA']} 
- **@TASK: it returns a function by which we bind object any time when user want like handlebar js*/
+
+/*OHM-RENDER-LIB-JS*/
+/*@Author: Rahul Semwal
+**@Method: Regex
+**@DOC:By different method
+**@LEVEL-5:Suport for complex object DS like {name:'rahul',age:23,address:{street:'Noida Lan 1'},degree:['BCA','MCA']} 
+**@TASK: It returns a reusable function by which we can bind object at any time when user want, like handlebar js*/
 UIengine = function(tpl, cb) {
     //magic go here.
     var re = /<%([^%>]+)?%>/g,
@@ -1101,11 +1105,14 @@ UIengine = function(tpl, cb) {
     }
     return runCode(code);
 }
-/*UIengine('<p>Hi, my name"s is <%this.name%>, and my age is <%this.age%>, living in <%this.address.street%>.</p><%for(var i = 0; i<this.degree.length; i++){%><p><%this.degree[i]%></p><%}%>', {
-    name: "rahul",
-    age: 23,
-    address: {
-        street: 'Noida lan no 1'
-    },
-    degree: ['BCA', 'MCA']
-});*/
+/*
+**@Example : 
+    UIengine('<p>Hi, my name"s is <%this.name%>, and my age is <%this.age%>, living in <%this.address.street%>.</p><%for(var i = 0; i<this.degree.length; i++){%><p><%this.degree[i]%></p><%}%>', {
+        name: "rahul",
+        age: 23,
+        address: {
+            street: 'Noida lan no 1'
+        },
+        degree: ['BCA', 'MCA']
+    });
+*/

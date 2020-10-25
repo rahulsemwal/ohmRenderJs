@@ -4,6 +4,9 @@ It is an open source "Javascript Template Engine Library" based upon fast HTML r
 # Idea
 what are we doing here, just wanting to create a compiler kind of stuff who can manage and convert raw input into something human understandable things.
 
+# Goal
+Create a Simple + Performative + Flexible library which must follow the rule of "Cohesion" and "Coupling" in modules i.e. each module should be 100% capable of doing their defined task and becmome more powerful by coupling with other modules. so that this library can become the best fit for everyone.    
+
 # Usage
 **For Library users:** Please choose an appropriate version of JS library from "lib" folder.
 
@@ -14,7 +17,7 @@ Examples for particular versions are availble in "example" folder, please have a
 
 # How to contribute
   - Welcoming your all suggestions and feedbacks, right now our preferable channel is github. 
-  - Take a fork of above code base, execute it in your way, raise confusions & bugs, add your logic and create a pull request, then I wil review it and merge it accordingly. simple!! tada.
+  - Take a fork of above code base, execute code in your way, raise confusions & bugs, add your logic and create a pull request, then I wil review it and merge it accordingly. simple!! tada.
   - Any confusion, drop a comment or create a defect here, we will solve it :).
 
 # Way of going
