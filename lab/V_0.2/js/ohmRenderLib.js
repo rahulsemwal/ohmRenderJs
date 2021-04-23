@@ -55,4 +55,18 @@ UIengine = function(tpl, cb) {
         },
         degree: ['BCA', 'MCA']
     });
+**@Example
+    var template = 
+    'My skills:' + 
+    '<%if(this.showSkills) {%>' +
+        '<%for(var index in this.skills) {%>' + 
+        '<a href="#"><%this.skills[index]%></a>' +
+        '<%}%>' +
+    '<%} else {%>' +
+        '<p>none</p>' +
+    '<%}%>';
+    console.log(UIengine(template, {
+        skills: ["js", "html", "css"],
+        showSkills: true
+    }));
 */

@@ -12,10 +12,10 @@ function initApp() {
     }
     var markup = document.getElementById("list2").innerHTML;
     // var parsedMarkup = UIengine4(markup, data, function(r) {});
-    var parsedMarkup = UIengine(markup, function(r) {});
+    childParsedMarkup = UIengine(markup, function(r) {});
     var placeholder = document.getElementsByClassName("page");
     // placeholder[0].innerHTML = parsedMarkup;
-    placeholder[0].innerHTML = parsedMarkup(data);
+    // placeholder[0].innerHTML = childParsedMarkup(data);
 
     //Next level
     data = {
@@ -27,7 +27,7 @@ function initApp() {
         degree: ['BCA', 'MSC']
     }
     markup = document.getElementById("list3").innerHTML;
-    parsedMarkup = UIengine(markup, function(r) {});
+    var parsedMarkup = UIengine(markup, function(r) {});
     document.getElementsByClassName("page")[0].insertAdjacentHTML('afterend', parsedMarkup(data));
 
 }

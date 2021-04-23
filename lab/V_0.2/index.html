@@ -1,10 +1,13 @@
 <html>
   <head>
     <style></style>
+    <script type="text/javascript">
+        var childParsedMarkup;
+    </script>,
     <script type="text/javascript" src="js/ohmRenderLib.js"></script>
   </head>
   <body>
-    <H1>This example taken from lib folder</H1>
+    <H1>This example taken from /lab/V_0.2 folder</H1>
     <div class="page">
 
     </div>
@@ -25,6 +28,7 @@
     </ul>
     </script>
     <script id="list3" type="text/html">
+      <div><%childParsedMarkup(this)%></div>  
       <p><small>Test case2:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>></small></p>
       <p>My degrees are:</p>
       <ul>

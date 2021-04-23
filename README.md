@@ -2,7 +2,10 @@
 It is an open source "Javascript Template Engine Library" based upon fast HTML rendering and providing small hack for making HTML web pages faster as same as Angular, React and vue js.  
 
 # Idea
-what are we doing here, just wanting to create a compiler kind of stuff who can manage and convert raw input into something human understandable things.
+what are we doing here, just wanting to create a compiler bot who can manage and convert raw input into something human understandable things.
+
+# Demo
+https://rahulsemwal.github.io/ohmRenderJs/
 
 # Goal
 Create a Simple + Performative + Flexible library which must follow the rule of "Cohesion" and "Coupling" in modules i.e. each module should be 100% capable of doing their defined task and becmome more powerful by coupling with other modules. so that this library can become the best fit for everyone.    
@@ -14,6 +17,13 @@ Create a Simple + Performative + Flexible library which must follow the rule of 
 
 # Examples [Most important!!]
 Examples for particular versions are availble in "example" folder, please have a look into those, execute these in your way and try to understand the flow.
+
+# Run example in Gitpod.io
+  - Open new browser's tab and paste below url
+  - http://gitpod.io/#https://github.com/rahulsemwal/ohmRenderJs
+  - Open terminal and run following cmd, [root]:/ python3 -m http.server 3000 or [root]/examples:/ python3 -m http.server 3000
+  - [root] means root destination of the project.
+  - Explore code from index.html file and pick the right way to deep dive(y).
 
 # How to contribute
   - Welcoming your all suggestions and feedbacks, right now our preferable channel is github. 
@@ -27,7 +37,6 @@ Examples for particular versions are availble in "example" folder, please have a
   - Understand new DOM concept of web from W3c, so that we can code with updated concept of DOM and browsers.
   - Find a best pattern and ideation to create a flexible javascript library
   - First Goal: Implement vanilla javascript for JavaScript lovers which include data binding, event handling, minification and security. 
-  - Build core library in vanilla javascript
   - Second Goal: Think to extend towards modern way to build a progressive library 
   - Third Goal: Think to extend a modern Javascript towards a framework which include CSR+SSR, PWA, SEO, Routing, etc
 
