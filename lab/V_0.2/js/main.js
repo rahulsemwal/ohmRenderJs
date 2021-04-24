@@ -1,23 +1,11 @@
 /*MAIN-JS*/
 function initApp() {
-
-    // var data = {name:"Rahul",age:28,address:"Noida"};
-    var data = {
-        name: "rahul",
-        age: 23,
-        address: {
-            street: 'Noida lan no 1'
-        },
-        degree: ['BCA', 'MCA']
-    }
-    var markup = document.getElementById("list2").innerHTML;
-    // var parsedMarkup = UIengine4(markup, data, function(r) {});
-    childParsedMarkup = UIengine(markup, function(r) {});
-    var placeholder = document.getElementsByClassName("page");
-    // placeholder[0].innerHTML = parsedMarkup;
-    // placeholder[0].innerHTML = childParsedMarkup(data);
-
-    //Next level
+    var Root = document.getElementsByClassName("page"),
+    markup = '', data;
+    markup = document.getElementById("child-1").innerHTML;
+    child1ParsedMarkup = UIengine(markup, function(r){});
+    markup = document.getElementById("child-2").innerHTML;
+    child2ParsedMarkup = UIengine(markup, function(r) {});
     data = {
         name: "Kunal",
         age: 23,
@@ -26,10 +14,9 @@ function initApp() {
         },
         degree: ['BCA', 'MSC']
     }
-    markup = document.getElementById("list3").innerHTML;
-    var parsedMarkup = UIengine(markup, function(r) {});
-    document.getElementsByClassName("page")[0].insertAdjacentHTML('afterend', parsedMarkup(data));
-
+    markup = document.getElementById("parent").innerHTML;
+    var parentParsedMarkup = UIengine(markup, function(r) {});
+    Root[0].insertAdjacentHTML('afterend', parentParsedMarkup(data));
 }
 
 window.document.onreadystatechange = function() {

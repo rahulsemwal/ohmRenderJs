@@ -2,7 +2,8 @@
   <head>
     <style></style>
     <script type="text/javascript">
-        var childParsedMarkup;
+        //components
+        // var child1ParsedMarkup, child2ParsedMarkup;
     </script>,
     <script type="text/javascript" src="js/ohmRenderLib.js"></script>
   </head>
@@ -13,10 +14,13 @@
     </div>
 
 
-    <script id="list" type="text/html">
-    	<p>Hi, my name is {{name}}, and my age is {{age}}, living in {{address}}.</p> 
+    <script id="child-1" type="text/html">
+    	<p>Hi, my name is <%this.name%>, and my age is <%this.age%>, living in <%this.address%>.</p> 
     </script>
-    <script id="list2" type="text/html">
+    <script id="child-2" type="text/html">
+      <div>
+          <%child1ParsedMarkup(this)%>
+      </div>  
       <p><small>Test case1:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>></small></p>
       <p>Hi, my name is <%this.name%>, and my age is <%this.age%>, living in <%this.address.street%>.
       </p>
@@ -27,8 +31,8 @@
       <%}%>
     </ul>
     </script>
-    <script id="list3" type="text/html">
-      <div><%childParsedMarkup(this)%></div>  
+    <script id="parent" type="text/html">
+      <div><%child2ParsedMarkup(this)%></div>  
       <p><small>Test case2:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>></small></p>
       <p>My degrees are:</p>
       <ul>
