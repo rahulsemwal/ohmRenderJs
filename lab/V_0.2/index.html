@@ -1,6 +1,23 @@
 <html>
   <head>
-    <style></style>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .parent,.child-1,.child-2{
+            width:60%;
+            padding:10px;
+        }
+        .parent{
+            background-color:cornsilk;
+        }
+        .child-2{
+            background-color: bisque;
+        }
+        .child-1{
+            background-color: darkcyan;
+        }
+    </style>
     <script type="text/javascript">
         //components
         // var child1ParsedMarkup, child2ParsedMarkup;
@@ -15,33 +32,40 @@
 
 
     <script id="child-1" type="text/html">
-    	<p>Hi, my name is <%this.name%>, and my age is <%this.age%>, living in <%this.address%>.</p> 
+        <div class="child-1">
+            <h3>Child 1</h3>
+    	    <p>Hi, my name is <%this.name%>, and my age is <%this.age%>, living in <%this.address%>.</p> 
+        </div>
     </script>
     <script id="child-2" type="text/html">
-      <div>
+      <div class="child-2">
+        <h2>Child 2</h2><br/>
+        <div>
           <%child1ParsedMarkup(this)%>
-      </div>  
-      <p><small>Test case1:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>></small></p>
-      <p>Hi, my name is <%this.name%>, and my age is <%this.age%>, living in <%this.address.street%>.
-      </p>
-      <p>My degrees are:</p>
-      <ul>
-      <%for(var i = 0; i<this.degree.length; i++){%>
-        <li><%this.degree[i]%></li>
-      <%}%>
-    </ul>
+        </div>  
+        <p>Hi, my name is <%this.name%>, and my age is <%this.age%>, living in <%this.address.street%>.
+        </p>
+        <p>My degrees are:</p>
+        <ul>
+        <%for(var i = 0; i<this.degree.length; i++){%>
+            <li><%this.degree[i]%></li>
+        <%}%>
+        </ul>
+      </div>
     </script>
     <script id="parent" type="text/html">
-      <div><%child2ParsedMarkup(this)%></div>  
-      <p><small>Test case2:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>></small></p>
-      <p>My degrees are:</p>
-      <ul>
-      <%for(var i = 0; i<this.degree.length; i++){%>
-        <li><%this.degree[i]%></li>
-      <%}%>
-      </ul>
-      <p>Hi, my name is <%this.name%>, and my age is <%this.age%>, living in <%this.address.street%>.
-      </p>
+        <div class="parent" style="text-align:left;">
+            <h1>Parent</h1><br/>
+            <div><%child2ParsedMarkup(this)%></div> 
+            <p>My degrees are:</p>
+            <ul>
+            <%for(var i = 0; i<this.degree.length; i++){%>
+                <li><%this.degree[i]%></li>
+            <%}%>
+            </ul>
+            <p>Hi, my name is <%this.name%>, and my age is <%this.age%>, living in <%this.address.street%>.
+            </p>
+        </div>
     </script>
     <script type="text/javascript" src="js/main.js"></script>
   </body>

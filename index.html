@@ -1,6 +1,23 @@
 <html>
   <head>
-    <style></style>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .list3,.list2,.list{
+            width:60%;
+            padding:10px;
+        }
+        .list3{
+            background-color:cornsilk;
+        }
+        .list2{
+            background-color: bisque;
+        }
+        .list{
+            background-color: darkcyan;
+        }
+    </style>
     <script type="text/javascript" src="lib/V_0.1/js/ohmRenderLib.js"></script>
   </head>
   <body>
@@ -11,29 +28,35 @@
 
 
     <script id="list" type="text/html">
-    	<p>Hi, my name is {{name}}, and my age is {{age}}, living in {{address}}.</p> 
+    	<div class="list">
+            <p>Hi, my name is {{name}}, and my age is {{age}}, living in {{address}}.</p> 
+        </div>
     </script>
     <script id="list2" type="text/html">
-      <p><small>Test case1:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>></small></p>
-      <p>Hi, my name is <%this.name%>, and my age is <%this.age%>, living in <%this.address.street%>.
-      </p>
-      <p>My degrees are:</p>
-      <ul>
-      <%for(var i = 0; i<this.degree.length; i++){%>
+      <div class="list2">
+        <p><small>Test case1:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>></small></p>
+        <p>Hi, my name is <%this.name%>, and my age is <%this.age%>, living in <%this.address.street%>.
+        </p>
+        <p>My degrees are:</p>
+        <ul>
+        <%for(var i = 0; i<this.degree.length; i++){%>
         <li><%this.degree[i]%></li>
-      <%}%>
-    </ul>
+        <%}%>
+        </ul>
+      </div>
     </script>
     <script id="list3" type="text/html">
-      <p><small>Test case2:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>></small></p>
-      <p>My degrees are:</p>
-      <ul>
-      <%for(var i = 0; i<this.degree.length; i++){%>
-        <li><%this.degree[i]%></li>
-      <%}%>
-      </ul>
-      <p>Hi, my name is <%this.name%>, and my age is <%this.age%>, living in <%this.address.street%>.
-      </p>
+      <div class="list3">
+        <p><small>Test case2:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>></small></p>
+        <p>My degrees are:</p>
+        <ul>
+        <%for(var i = 0; i<this.degree.length; i++){%>
+            <li><%this.degree[i]%></li>
+        <%}%>
+        </ul>
+        <p>Hi, my name is <%this.name%>, and my age is <%this.age%>, living in <%this.address.street%>.
+        </p>
+      </div>
     </script>
     <script type="text/javascript" src="examples/V_0.1/js/main.js"></script>
   </body>
