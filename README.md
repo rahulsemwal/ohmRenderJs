@@ -1,14 +1,11 @@
 # ohmRenderJs
-It is an open source "Javascript Template Engine Library" based upon fast HTML rendering and providing small hack for making HTML web pages faster as same as Angular, React and vue js.  
+It is an open source "Javascript Template Engine Library" based upon fast HTML rendering and providing small hack for making HTML web pages faster as same as Handlebars, Angular, React, vue js, etc..  
 
 # Idea
-what are we doing here, just wanting to create a compiler bot who can manage and convert raw input into something human understandable things.
+what are we doing here that creating a compiler bot who can manage and convert raw input into something human understandable things. In basic words a javaScript library which allows to create self powered js component for web pages and each componets must follow the rule of "Cohesion" and "Coupling" with other components. 
 
 # Demo
 https://rahulsemwal.github.io/ohmRenderJs/
-
-# Goal
-Create a Simple + Performative + Flexible library which must follow the rule of "Cohesion" and "Coupling" in modules i.e. each module should be 100% capable of doing their defined task and becmome more powerful by coupling with other modules. so that this library can become the best fit for everyone.    
 
 # Usage
 **For Library users:** Please choose an appropriate version of JS library from "lib" folder.
