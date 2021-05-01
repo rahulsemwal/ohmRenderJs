@@ -14,6 +14,7 @@ Create a Simple + Performative + Flexible library which must follow the rule of 
 **For Library users:** Please choose an appropriate version of JS library from "lib" folder.
 
 **For Contributors:** If you have a passion to innovate or learn JS library so please contribute in our lab section, version wise code available in "lab" folder. Have a look at least :).
+Current work area: /lab/V_0.2/
 
 # Examples [Most important!!]
 Examples for particular versions are availble in "example" folder, please have a look into those, execute these in your way and try to understand the flow.

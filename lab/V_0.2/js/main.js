@@ -1,6 +1,9 @@
 /*MAIN-JS*/
+//Glbal Reusable Components Declarion
+var child1ParsedMarkup, child2ParsedMarkup;
+
 function initApp() {
-    var Root = document.getElementsByClassName("page"),
+    var Root = document.getElementsByClassName("page")[0],
     markup = '', data;
     markup = document.getElementById("child-1").innerHTML;
     child1ParsedMarkup = UIengine(markup, function(r){});
@@ -12,11 +15,11 @@ function initApp() {
         address: {
             street: 'Noida lan no 1'
         },
-        degree: ['BCA', 'MSC']
+        degree: ['BCA', 'MCA']
     }
     markup = document.getElementById("parent").innerHTML;
     var parentParsedMarkup = UIengine(markup, function(r) {});
-    Root[0].insertAdjacentHTML('afterend', parentParsedMarkup(data));
+    Root.insertAdjacentHTML('afterend', parentParsedMarkup(data));
 }
 
 window.document.onreadystatechange = function() {
