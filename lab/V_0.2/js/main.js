@@ -1,23 +1,26 @@
 /*MAIN-JS*/
 //Glbal Reusable Components Declarion
-var child1ParsedMarkup, child2ParsedMarkup;
+//First independent component
+function child1ParsedMarkup(props){
+    var markup = document.getElementById("child-1").innerHTML;
+    var parsedMarkup = UIengine(markup, function(r){});
+    return parsedMarkup(props);
+};
+//Second independent component
+function child2ParsedMarkup(props){
+    var markup = document.getElementById("child-2").innerHTML;
+    var parsedMarkup = UIengine(markup, function(r) {});
+    return parsedMarkup(props);
+}
 
 function initApp() {
-    var Root = document.getElementsByClassName("page")[0],
-    markup = '', data;
-    markup = document.getElementById("child-1").innerHTML;
-    child1ParsedMarkup = UIengine(markup, function(r){});
-    markup = document.getElementById("child-2").innerHTML;
-    child2ParsedMarkup = UIengine(markup, function(r) {});
-    data = {
-        name: "Kunal",
-        age: 23,
-        address: {
-            street: 'Noida lan no 1'
-        },
-        degree: ['BCA', 'MCA']
-    }
-    markup = document.getElementById("parent").innerHTML;
+    var Root = document.getElementsByClassName("page")[0];
+    var data = { name: "Kunal", age: 23, address: { street: 'Noida lan no 1' }, degree: ['BCA', 'MCA']}
+    // var markup = document.getElementById("child-1").innerHTML;
+    // child1ParsedMarkup = UIengine(markup, function(r){});
+    // markup = document.getElementById("child-2").innerHTML;
+    // child2ParsedMarkup = UIengine(markup, function(r) {});
+    var markup = document.getElementById("parent").innerHTML;
     var parentParsedMarkup = UIengine(markup, function(r) {});
     Root.insertAdjacentHTML('afterend', parentParsedMarkup(data));
 }
