@@ -5,7 +5,7 @@ It is an open source "Javascript Template Engine Library" based upon fast HTML r
 what are we doing here that creating a compiler bot who can manage and convert raw input into something human understandable things. In basic words a javaScript library which allows to create self powered js component for web pages and each componets must follow the rule of "Cohesion" and "Coupling" with other components. 
 
 # Demo
-https://rahulsemwal.github.io/ohmRenderJs/
+https://rahulsemwal.github.io/ohmRenderJs/examples/V_0.1/index.html
 
 # Usage
 **For Library users:** Please choose an appropriate version of JS library from "lib" folder.
@@ -39,7 +39,7 @@ Examples for particular versions are availble in "example" folder, please have a
   - Third Goal: Think to extend a modern Javascript towards a framework which include CSR+SSR, PWA, SEO, Routing, etc
 
 # Extra ordinary
-  - Try to think to provide extention for webassembly, Tensorflow.js, AI, VR, AR etc     
+  - Try to think to provide extention for webassembly, Tensorflow.js, AI, VR, AR etc..     
   
 # Ref
 - http://krasimirtsonev.com/blog/article/Javascript-template-engine-in-just-20-line

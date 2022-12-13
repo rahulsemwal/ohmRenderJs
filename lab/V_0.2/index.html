@@ -4,6 +4,12 @@
         *{
             font-family: Arial, Helvetica, sans-serif;
         }
+        H1{
+            margin-bottom: 0px;
+        }
+        p{
+            margin-top: 0px;
+        }
         .parent,.child-1,.child-2{
             width:60%;
             padding:10px;
@@ -21,11 +27,12 @@
     <script type="text/javascript">
         //components
         // var child1ParsedMarkup, child2ParsedMarkup;
-    </script>,
+    </script>
     <script type="text/javascript" src="js/ohmRenderLib.js"></script>
   </head>
   <body>
-    <H1>This example taken from /lab/V_0.2 folder</H1>
+    <H1>Example shows Nested components implementation by ohmRenderLib.js</H1>
+    <p>(This example taken from /lab/V_0.2 folder)</p>
     <div class="page">
 
     </div>
@@ -34,7 +41,7 @@
     <script id="child-1" type="text/html">
         <div class="child-1">
             <h3>Child 1</h3>
-            <p>Hi, my name is <%this.name%>, and my age is <%this.age%>, living in .</p> 
+            <p>Hi, my name is <%this.name%>, and my age is <%this.age%>, living in <%this.address.street%>.</p> 
             <p>Degrees: <%this.degree[0]%>, <%this.degree[1]%></p>
         </div>
     </script>
