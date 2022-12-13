@@ -39,7 +39,7 @@ Examples for particular versions are availble in "example" folder, please have a
   - Third Goal: Think to extend a modern Javascript towards a framework which include CSR+SSR, PWA, SEO, Routing, etc
 
 # Extra ordinary
-  - Try to think to provide extention for webassembly, Tensorflow.js, AI, VR, AR etc.     
+  - Try to think to provide extention for webassembly, Tensorflow.js, AI, VR, AR etc     
   
 # Ref
 - http://krasimirtsonev.com/blog/article/Javascript-template-engine-in-just-20-line
