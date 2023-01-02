@@ -14,7 +14,7 @@ https://rahulsemwal.github.io/ohmRenderJs/examples/V_0.1/index.html
 Current work area: /lab/V_0.2/
 
 # Examples [Most important!!]
-Examples for particular versions are availble in "example" folder, please have a look into those, execute these in your way and try to understand the flow.
+Examples for particular versions are availble in "examples" folder, please have a look, execute in your way and try to understand the flow.
 
 # Run example in Gitpod.io
   - Open new browser's tab and paste below url

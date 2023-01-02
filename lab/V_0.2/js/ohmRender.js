@@ -4,7 +4,7 @@
 **@DOC:By different method
 **@LEVEL-5:Suport for complex object DS like {name:'rahul',age:23,address:{street:'Noida Lan 1'},degree:['BCA','MCA']} 
 **@TASK: It returns a reusable function by which we can bind object at any time when user want, like handlebar js*/
-UIengine = function(tpl, cb) {
+ohmify = function(tpl, cb) {
     //magic goes here.
     var re = /<%([^%>]+)?%>/g,
         codeReExp = /(^( )?(if|for|else|switch|case|break|{|}))(.*)?/g,
@@ -47,7 +47,7 @@ UIengine = function(tpl, cb) {
 }
 /*
 **@Example : 
-    UIengine('<p>Hi, my name"s is <%this.name%>, and my age is <%this.age%>, living in <%this.address.street%>.</p><%for(var i = 0; i<this.degree.length; i++){%><p><%this.degree[i]%></p><%}%>', {
+    ohmify('<p>Hi, my name"s is <%this.name%>, and my age is <%this.age%>, living in <%this.address.street%>.</p><%for(var i = 0; i<this.degree.length; i++){%><p><%this.degree[i]%></p><%}%>', {
         name: "rahul",
         age: 23,
         address: {
@@ -65,7 +65,7 @@ UIengine = function(tpl, cb) {
     '<%} else {%>' +
         '<p>none</p>' +
     '<%}%>';
-    console.log(UIengine(template, {
+    console.log(ohmify(template, {
         skills: ["js", "html", "css"],
         showSkills: true
     }));
