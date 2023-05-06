@@ -13,9 +13,6 @@ https://rahulsemwal.github.io/ohmRenderJs/examples/V_0.1/index.html
 **For Contributors:** If you have a passion to innovate or learn JS library so please contribute in our lab section, version wise code available in "lab" folder. Have a look at least :).
 Current work area: /lab/V_0.2/
 
-# Examples [Most important!!]
-Examples for particular versions are availble in "examples" folder, please have a look, execute in your way and try to understand the flow.
-
 # Run example in Gitpod.io
   - Open new browser's tab and paste below url
   - http://gitpod.io/#https://github.com/rahulsemwal/ohmRenderJs
@@ -27,7 +24,7 @@ Examples for particular versions are availble in "examples" folder, please have 
   - Welcoming your all suggestions and feedbacks, right now our preferable channel is github. 
   - Take a fork of above code base, execute code in your way, raise confusions & bugs, add your logic and create a pull request, then I wil review it and merge it accordingly. simple!! tada.
   - Any confusion, drop a comment or create a defect here, we will solve it :).
-
+  
 # Way of going
   - Understand all about DOM with noscript disable
   - Understand All about DOM with noscript enabled
@@ -40,7 +37,9 @@ Examples for particular versions are availble in "examples" folder, please have 
 
 # Extra ordinary
   - Try to think to provide extention for webassembly, Tensorflow.js, AI, VR, AR etc..     
-  
+# TASK
+* Introduce omify.regiter() for registering object or function available for ohmRender to access
+* Introduce helper and plugin to enhance omhRender.js
 # Ref
 - http://krasimirtsonev.com/blog/article/Javascript-template-engine-in-just-20-line
 - https://jonsuh.com/blog/javascript-templating-without-a-library/
