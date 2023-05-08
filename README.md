@@ -38,8 +38,8 @@ Current work area: /lab/V_0.2/
 # Extra ordinary
   - Try to think to provide extention for webassembly, Tensorflow.js, AI, VR, AR etc..     
 # TASK
-* Introduce omify.regiter() for registering object or function available for ohmRender to access
-* Introduce helper and plugin to enhance omhRender.js
+- [ ] Introduce helper and genric plugin builder to enhance omhRender.js
+- [ ] Introduce omify.register() function for registering object or function accessible inside ohmRender library
 # Ref
 - http://krasimirtsonev.com/blog/article/Javascript-template-engine-in-just-20-line
 - https://jonsuh.com/blog/javascript-templating-without-a-library/
