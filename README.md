@@ -5,16 +5,13 @@ It is an open source "Javascript Template Engine Library" based upon fast HTML r
 what are we doing here that creating a compiler bot who can manage and convert raw input into something human understandable things. In basic words a javaScript library which allows to create self powered js component for web pages and each componets must follow the rule of "Cohesion" and "Coupling" with other components. 
 
 # Demo
-https://rahulsemwal.github.io/ohmRenderJs/examples/V_0.1/index.html
+https://rahulsemwal.github.io/ohmRenderJs/examples/page
 
 # Usage
 **For Library users:** Please choose an appropriate version of JS library from "lib" folder.
 
 **For Contributors:** If you have a passion to innovate or learn JS library so please contribute in our lab section, version wise code available in "lab" folder. Have a look at least :).
 Current work area: /lab/V_0.2/
-
-# Examples [Most important!!]
-Examples for particular versions are availble in "examples" folder, please have a look, execute in your way and try to understand the flow.
 
 # Run example in Gitpod.io
   - Open new browser's tab and paste below url
@@ -27,7 +24,7 @@ Examples for particular versions are availble in "examples" folder, please have 
   - Welcoming your all suggestions and feedbacks, right now our preferable channel is github. 
   - Take a fork of above code base, execute code in your way, raise confusions & bugs, add your logic and create a pull request, then I wil review it and merge it accordingly. simple!! tada.
   - Any confusion, drop a comment or create a defect here, we will solve it :).
-
+  
 # Way of going
   - Understand all about DOM with noscript disable
   - Understand All about DOM with noscript enabled
@@ -41,6 +38,10 @@ Examples for particular versions are availble in "examples" folder, please have 
 # Extra ordinary
   - Try to think to provide extention for webassembly, Tensorflow.js, AI, VR, AR etc..     
   
+# TASK
+- [ ] Introduce helper and genric plugin builder to enhance omhRender.js
+- [ ] Introduce omify.register() function for registering object or function accessible inside ohmRender library
+
 # Ref
 - http://krasimirtsonev.com/blog/article/Javascript-template-engine-in-just-20-line
 - https://jonsuh.com/blog/javascript-templating-without-a-library/
