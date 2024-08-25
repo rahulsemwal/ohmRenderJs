@@ -41,6 +41,9 @@ Current work area: /lab/V_0.2/
 # TASK
 - [ ] Introduce helper and genric plugin builder to enhance omhRender.js
 - [ ] Introduce omify.register() function for registering object or function accessible inside ohmRender library
+- [ ] pure component using clousor and inner function instance return template.
+- [ ] pure component with state management, update UI automatically when it's this object's data would change
+- [ ] pure component replace `this` with `props` if possible.
 
 # Ref
 - http://krasimirtsonev.com/blog/article/Javascript-template-engine-in-just-20-line
