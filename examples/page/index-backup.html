@@ -1,0 +1,284 @@
+<!-- 
+  Tasks:
+  1 - Write top quotation with csr rendering with html css and js
+  2 - Write top quotation with ssr rendering support with all server side languages like Node, deno, Bun, next.js, java, c#, python, ruby & rails etc. 
+  3 - [INP] - Build "using html" section (last) with sample6 folder, give link to open example in next tab, same with using nested component.
+  4 - Think a short cut UX for going to topic references like all headings present in index.html
+  5 - [edify] - create github header in edify example page like you build for this index.html 
+  6 - [edify] - beutify scroller for editor like preview.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ohmRenderJs</title>
+    <link rel="stylesheet" href="bootstrap-grid.css">
+    <!-- <link rel="stylesheet" href="bootstrap.css"> -->
+    <link rel="stylesheet" href="edify/lib/css/prism.css">
+    <link rel="stylesheet" href="edify/lib/css/edify.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <style>
+      .row{
+        /* background-color: grey; */
+      }
+      .xyz [class*=col]{
+        background-color: #f6f8fa;
+        border: 1px solid grey;
+        height:300px;
+      }
+      header{
+        background-color: black;
+        color: white;
+      }
+      header a{
+        text-decoration: none;
+        color: white;
+        float: right;
+      }
+      code{
+        padding: 0.2em 0.4em;
+        margin: 0;
+        font-size: 94%;
+        white-space: break-spaces;
+        background-color: rgba(175,184,193,0.2);
+        border-radius: 6px;
+      }
+      .blog{
+        padding: 16px;
+        /* overflow: auto; */
+        /* font-size: 85%; */
+        line-height: 1.45;
+        color: #1f2328;
+        background-color: #f6f8fa;
+        /* background-color: #f7f7f7; */
+        border-radius: 6px;
+      }
+      .list{
+        padding-left: 15px;
+      }
+      .link-github{
+        display: flex;
+        align-items: center;
+      }
+      .icon-github{
+        fill: #aeaeae;
+        margin: 10px 0px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-10 col-xs-10">
+            <h2 class="">OhmRender.js <% pure-javaScript %></h2>
+          </div>
+          <div class="col-md-2 col-xs-2">
+            <a href="https://github.com/rahulsemwal/ohmRenderJs" target="_blank" class="link-github">
+              <h2 class="hidden-xs">Github</h2>
+              <svg class="icon-github" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="45" height="45" viewBox="0 0 72 72">
+                <path d="M36,12c13.255,0,24,10.745,24,24c0,10.656-6.948,19.685-16.559,22.818c0.003-0.009,0.007-0.022,0.007-0.022	s-1.62-0.759-1.586-2.114c0.038-1.491,0-4.971,0-6.248c0-2.193-1.388-3.747-1.388-3.747s10.884,0.122,10.884-11.491	c0-4.481-2.342-6.812-2.342-6.812s1.23-4.784-0.426-6.812c-1.856-0.2-5.18,1.774-6.6,2.697c0,0-2.25-0.922-5.991-0.922	c-3.742,0-5.991,0.922-5.991,0.922c-1.419-0.922-4.744-2.897-6.6-2.697c-1.656,2.029-0.426,6.812-0.426,6.812	s-2.342,2.332-2.342,6.812c0,11.613,10.884,11.491,10.884,11.491s-1.097,1.239-1.336,3.061c-0.76,0.258-1.877,0.576-2.78,0.576	c-2.362,0-4.159-2.296-4.817-3.358c-0.649-1.048-1.98-1.927-3.221-1.927c-0.817,0-1.216,0.409-1.216,0.876s1.146,0.793,1.902,1.659	c1.594,1.826,1.565,5.933,7.245,5.933c0.617,0,1.876-0.152,2.823-0.279c-0.006,1.293-0.007,2.657,0.013,3.454	c0.034,1.355-1.586,2.114-1.586,2.114s0.004,0.013,0.007,0.022C18.948,55.685,12,46.656,12,36C12,22.745,22.745,12,36,12z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+        <div class="container-fluid">
+          <h1>Welcome to ohmRenderJs universe</h1>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="blog">
+                <p>
+                  It is an open source "Javascript Template Engine Library" based upon fast HTML rendering and providing small hack for making HTML web pages faster as same as Handlebars, Angular, React, vue js, etc..
+                  The basic idea here is that you can use your favorit javascript syntax inside <code><%%></code> block and use along with html template to render a DOM component,
+                  <ul>
+                    <li>example: <span>&lt;h4>My favorit language is <%this.language%>&lt;/h4></span> // output: <h4 style="display:inline;">My favorit language is javascript</h4></li>
+                    <li>example: <span>&lt;h4>Am I beautiful? <%if(true) { %> yes <% } else { %> No <% } %>!&lt;/h4></span> // output: <h4 style="display:inline;">Am I beautiful? yes!</h4></li>
+                  </ul>
+                </p>
+              </div>
+              <div class="gy-25"></div>
+            </div>
+            <div class="col-md-12 hidden">
+              <div class="blog">faster</div>
+              <div class="blog">easy</div>
+              <div class="blog">vanilla javascript</div>
+              <div class="blog">Felexible</div>
+              <div class="gy-25"></div>
+            </div>
+            <div class="col-md-4">
+              <div class="blog">
+                <p>
+                  This is the first <strong>Hello Word!</strong> example with using <strong>ohmRender.js</strong>.
+                  <ul class="list">
+                    <li><code>Root</code>: is pointing to body element in the DOM</li>
+                    <li><code>data</code>: is a JSON object</li>
+                    <li><code>template</code>: contains HTML string along with <code>omify syntax</code> which are based upon pure javascript</li>
+                    <li><code><%this.name%></code>: <code>this</code> denotes to the root of JSON object means <code>data</code></li>
+                    <li><code>component = omify(template, callback)</code>: returns a component function where template stands for html string, callback function executes when omify does it's work</li>
+                    <li><code>component(data)</code>: returns parsed HTML string with data binding by providing <code>data</code> object</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <edify language="js" preview="true" execution="file-markup" target="component/sample1.js" style="height:300px;"></edify>
+            </div>
+          </div>
+          <!-- <div class="gy-25"></div> -->
+          <div class="row">
+            <div class="col-md-12">
+              <h1>Component lifecycle, Build once, Reusable, Portable</h1>
+              <div class="blog">
+                <p>
+                  Once component is composed from omify() function then it will become live for whole life span of an application. It can render multiple times, even with the different data sets.
+                  So basic idea behind this is that we don't need to re-run omify() function multiple times to build the same component again & again. This mechanism helps in building resuablity and portability of a component. 
+                </p>
+              </div>
+              <div class="gy-25"></div>
+            </div>
+            <div class="col-md-4">
+              <div class="blog">
+                <p>
+                  This example showcase the usecase of rendering single component with multiple data sets.
+                  <ul class="list">
+                    <li><code>Root</code>: is pointing to body element in the DOM</li>
+                    <li><code>var data1 = </code>: JSON data set 1</li>
+                    <li><code>var data2 = </code>: JSON data set 2</li>
+                    <li><code>component(data)</code>: component can be reuse with different data sets like data1, data2, data3, etc.</li>
+                  </ul>  
+                </p>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <edify language="js" preview="true" execution="file-markup" target="component/sample2.js"></edify>
+            </div>
+          </div>
+          <!-- <div class="gy-25"></div> -->
+          <div class="row">
+            <div class="col-md-12">
+              <h1>Conditional statements and loops</h1>
+              <div class="blog">
+                <p>
+                  Not just normal bindings it also supports conditional bindings and loop bindings. 
+                  Which means you can write if and else to execute any conditional statement to bind the data and also
+                  run a for/while loop to render the same component again n again.</p>
+              </div>
+              <div class="gy-25"></div>
+            </div>
+            <div class="col-md-3">
+              <div class="blog">
+                <p>
+                  This example showcase the usecase of multiple data binding along with <code>if-else</code> and <code>for</code> loop blocks.
+                  <ul class="list">
+                    <li><code>omify syntax</code> contains basic javascript syntax like this, if, else, for, while, switch, break etc.</li>
+                    <li><code>` `</code>: string literals is also allowed to define template in javascript</li>
+                    <li><code>component(data)</code>: component can be reuse with different data set</li>
+                    <li><code>style</code>: injecting custom style into DOM for supporting template css</li>
+                  </ul>  
+                </p>
+              </div>
+            </div>
+            <div class="col-md-9">
+              <edify language="js" preview="true" execution="file-markup" target="component/sample3.js"></edify>
+            </div>
+          </div>
+          <!-- <div class="gy-25"></div> -->
+          <div class="row">
+            <div class="col-md-12">
+              <h1>Child components, Nesting</h1>
+              <div class="blog">
+                <p>
+                  Child component:
+                  Create small-2 modular components and build microfrontend with nesting child components.
+                  The best part of it is that we can create child 
+                </p>
+              </div>
+              <div class="gy-25"></div>
+            </div>
+            <div class="col-md-3">
+              <div class="blog">
+                <p>
+                  This example showcase the usecase of data binding along with <code>if-else</code> and <code>for</code> loop blocks.
+                  <ul class="list">
+                    <li><code>components = {}</code>: used as a container for holding all omifyied components.</li>
+                    <li><code>render</code>: custom function to render the components with the given json data</li>
+                    <li><code>app(data)</code>: render app as a root component with the given json data</li>
+                    <li><code>templates = {}</code>: divide big html template into small small templates.</li>
+                    <li><code>templates.app</code>: contains the root template which contains other child components like style and profile</li>
+                    <li><code>Nesting</code>: one template contains other child component and this chain go on and create nesting of components</li>
+                  </ul>  
+                </p>
+              </div>
+            </div>
+            <div class="col-md-9">
+              <edify language="js" preview="true" execution="file-markup" target="component/sample4.js"></edify>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <h1>Using HTML file</h1>
+              <div class="blog">
+                <p>
+                  Child component:
+                  Create small-2 modular components and build microfrontend with nesting child components.
+                  The best part of it is that we can create child 
+                </p>
+              </div>
+              <div class="gy-25"></div>
+            </div>
+            <div class="col-md-3">
+              <div class="blog">
+                <p>
+                  This example showcase the usecase of data binding along with <code>if-else</code> and <code>for</code> loop blocks.
+                  <ul class="list">
+                    <li><code>components = {}</code>: used as a container for holding all omifyied components.</li>
+                    <li><code>render</code>: custom function to render the components with the given json data</li>
+                    <li><code>app(data)</code>: render app as a root component with the given json data</li>
+                    <li><code>templates = {}</code>: divide big html template into small small templates.</li>
+                    <li><code>templates.app</code>: contains the root template which contains other child components like style and profile</li>
+                    <li><code>Nesting</code>: one template contains other child component and this chain go on and create nesting of components</li>
+                  </ul>  
+                </p>
+              </div>
+            </div>
+            <div class="col-md-9">
+              <edify language="html" preview="true" execution="file-markup" target="component/sample5.html"></edify>
+            </div>
+          </div>
+          <!-- <div class="gy-25"></div> -->
+          <div class="row">
+            <div class="col-md-12">
+              <h1>Load templates from HTML file</h1>
+              <div class="blog">
+                <p>
+                  In this technique we load html snipit from html file instead of fetching from script tag or writing inside javascript. 
+                  It makes code more modular, scalable, approachable and clean.
+                  It is the best acceptable pattern to develop the modular application with ohmRender.js. This patter is best suited for medium to large applications and make code more modular.
+                </p>
+              </div>
+              <div class="gy-25"></div>
+            </div>
+            <div class="col-md-12">
+              <edify language="html" preview="true" execution="file-markup" target="component/sample6/index.html"></edify>
+            </div>
+          </div>
+          <h1>Load templates from HTML template file</h1>
+          <div class="gy-25"></div>
+          <div class="row xyz">
+            <div class="col-md-3">tum tum</div>
+            <div class="col-md-3">tum tum</div>
+            <div class="col-md-3">tum tum</div>
+            <div class="col-md-3">tum tum</div>
+          </div>
+        </div> 
+    </main>
+	<script src="edify/lib/js/prism.js"></script>
+	<script src="edify/lib/js/edify.js"></script>
+  </body>
+</html>

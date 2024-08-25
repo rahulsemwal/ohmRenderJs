@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <script type="text/javascript" src="../../lib/js/ohmRender.js"></script>
+  </head>
+  <body>
+    <H3>Example shows Nested components implementation by ohmRender.js</H3>
+    <!-- Root -->
+    <div class="page"></div>
+
+    <!-- Template -->
+    <script id="child-1" type="text/html">
+        <div class="child-1">
+            <h3>Child 1</h3>
+            <p>Hi, my name is <%this.name%>, and my age is <%this.age%>, living in <%this.address.street%>.</p> 
+            <p>Degrees: <%this.degree[0]%>, <%this.degree[1]%></p>
+            
+            <div>
+                <%child2Component(this)%>
+            </div>
+        </div>
+    </script>
+    <!-- Template -->
+    <script id="child-2" type="text/html">
+      <div class="child-2">
+        <h2>Child 1.1</h2>
+        <p>Hi, my name is <%this.name%>, and my age is <%this.age%>, living in <%this.address.street%>.
+        </p>
+        <p>My degrees are:</p>
+        <ul>
+        <%for(var i = 0; i<this.degree.length; i++){%>
+            <li><%this.degree[i]%></li>
+        <%}%>
+        </ul>
+      </div>
+    </script>
+    <!-- Template -->
+    <script id="parent" type="text/html">
+        <div class="parent" style="text-align:left;">
+            <h1>Parent</h1><br/>
+            <div><%child1Component(this)%></div> 
+            <br>
+            <p><%this.parentData.type%> <%this.parentData.description%></p>
+        </div>
+    </script>
+     <!-- main.js -->
+     <script type="text/javascript">
+        function render(app){
+            var Root = document.getElementsByClassName("page")[0];
+            Root.insertAdjacentHTML('beforeend', app);
+        }
+
+        function initApp($w) {
+            var data = { name: "Kunal", age: 23, address: { street: 'Noida lan no 1' }, degree: ['BE', 'MS'], parentData: {"type": "<strong>@Note: </strong>", "description": "With ohmrender.js create multiple sibling component or parent child component relationships" }};
+            var templates = {
+                "child1": document.getElementById("child-1").innerHTML,
+                "child2": document.getElementById("child-2").innerHTML,
+                "parent": document.getElementById("parent").innerHTML
+            };
+            var child1Component = ohmify(templates['child1']);
+            var child2Component = ohmify(templates['child2']);
+            var parentComponent = ohmify(templates['parent']);
+            
+            //Exposing to global scope so the it can be accessed to templates present outside of initApp function.
+            $w.child1Component = child1Component;
+            $w.child2Component = child2Component;
+            $w.parentComponent = parentComponent;
+            render(parentComponent(data));
+        }
+        initApp(window);
+    </script>
+     <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        H1{
+            margin-bottom: 0px;
+        }
+        p{
+            margin-top: 0px;
+        }
+        .parent,.child-1,.child-2{
+            width: inherit;
+            padding:10px;
+        }
+        .parent{
+            background-color:cornsilk;
+        }
+        .child-2{
+            background-color: bisque;
+        }
+        .child-1{
+            background-color: darkcyan;
+        }
+    </style>
+  </body>
+</html>

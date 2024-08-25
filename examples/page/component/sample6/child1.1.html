@@ -1,0 +1,11 @@
+<div class="child-2">
+    <h2>Child 1.1</h2>
+    <p>Hi, my name is <%this.name%>, and my age is <%this.age%>, living in <%this.address.street%>.
+    </p>
+    <p>My degrees are:</p>
+    <ul>
+        <%for(var i = 0; i<this.degree.length; i++){%>
+            <li><%this.degree[i]%></li>
+        <%}%>
+    </ul>
+</div>

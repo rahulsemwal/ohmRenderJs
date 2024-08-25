@@ -28,11 +28,12 @@
         //components
         // var child1ParsedMarkup, child2ParsedMarkup;
     </script>
-    <script type="text/javascript" src="js/ohmRender.js"></script>
+    <script type="text/javascript" src="../../lib/js/ohmRender.js"></script>
   </head>
   <body>
     <H1>Example shows Nested components implementation by ohmRender.js</H1>
-    <p>(This example is taken from /lab/V_0.2 folder)</p>
+    <p> (This example is taken from /examples/example-v1/ folder and ohmRender.js is used from /lib/V_0.1)
+    </p>
     <div class="page">
 
     </div>
@@ -40,14 +41,14 @@
 
     <script id="child-1" type="text/html">
         <div class="child-1">
-            <h3>Child 1</h3>
+            <h3>Child 1.1</h3>
             <p>Hi, my name is <%this.name%>, and my age is <%this.age%>, living in <%this.address.street%>.</p> 
             <p>Degrees: <%this.degree[0]%>, <%this.degree[1]%></p>
         </div>
     </script>
     <script id="child-2" type="text/html">
       <div class="child-2">
-        <h2>Child 2</h2><br/>
+        <h2>Child 1</h2><br/>
         <div>
           <%child1ParsedMarkup(this)%>
         </div>  
@@ -65,14 +66,8 @@
         <div class="parent" style="text-align:left;">
             <h1>Parent</h1><br/>
             <div><%child2ParsedMarkup(this)%></div> 
-            <p>My degrees are:</p>
-            <ul>
-            <%for(var i = 0; i<this.degree.length; i++){%>
-                <li><%this.degree[i]%></li>
-            <%}%>
-            </ul>
-            <p>Hi, my name is <%this.name%>, and my age is <%this.age%>, living in <%this.address.street%>.
-            </p>
+            <br>
+            <p><%this.parentData.type%> <%this.parentData.description%></p>
         </div>
     </script>
     <script type="text/javascript" src="js/main.js"></script>

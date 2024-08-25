@@ -1,0 +1,154 @@
+/*
+* @Author: Rahul Semwal
+* @Version: Edify 0.1
+* @TECH DOC: .live-board css is a flexible css, below are some exposed classes where end user can modify it's dimentions as per their need
+* Width of edify: .live-board  { width : <custom width parameter> }
+* Height of edify: .live-board { height : <custom height parameter> }
+* Font family edify: .live-board { font-family: <custom font family> } 
+* Width of edify's editor panel: .live-board .left { flex : <custom width parameter or percentage> }
+* Width of edify's result panel: .live-board .right { flex : <custom width parameter or percentage> }
+* Font family edify's editor: .editing, pre[class*=language-].highlighting, pre[class*=language-].highlighting * { font-family: <custom font family> } 
+* Edify theme depends upon prism.css <prism-tomorrow>, which can be replaced with other theme, can be downloaded from https://prismjs.com/download.html [Not tested yet]
+*/
+
+.editing, pre[class*=language-].highlighting {
+  /* Both elements need the same text and space styling so they are directly on top of each other */
+  margin: 0px;
+  padding: 10px;
+  border: 0;
+}
+.editing, pre[class*=language-].highlighting {
+  /* In the same place */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right:0;
+}
+.editing, pre[class*=language-].highlighting {
+  /* Can be scrolled */
+  height:100%;
+  overflow: auto;
+  white-space: nowrap; /* Allows textarea to scroll horizontally */
+  box-sizing: border-box;
+}
+.editing, pre[class*=language-].highlighting, pre[class*=language-].highlighting * {
+  /* Also add text styles to highlighing tokens */
+  font-size: 10pt;
+  font-family: source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace;
+  line-height: 15pt;
+  tab-size: 2;
+}
+
+/* Move the textarea in front of the result */
+
+.editing {
+  z-index: 1;
+}
+pre[class*=language-].highlighting {
+  z-index: 0;
+}
+
+/* Make textarea almost completely transparent */
+
+.editing {
+  color: transparent;
+  background: transparent;
+  caret-color: white; /* Or choose your favourite color */
+  outline: none;
+}
+
+/* No resize on textarea */
+
+.editing {
+  resize: none;
+}
+
+/*----------------------------LIVE-BOARD CSS---------------------------------------*/
+
+.live-board {
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+.live-board {
+  /* @exposed */
+  width: 100%;
+  height:492px;
+  display: flex;
+  margin-bottom: 35px;
+}
+.live-board .left {
+  /* @exposed */
+  /* flex: 0 0 70%; */
+  flex: 1 1 auto;
+}
+.live-board .right {
+  /* @exposed */
+  /* flex: 0 0 30%; */
+  /* flex: 0.1 0 auto; */
+  flex: 0 0 40%;
+}
+.live-board header {
+  margin: 0;
+  padding: 0px 10px;
+  border-top-left-radius: 10px;
+  background: rgb(32, 35, 42);
+  color: #999;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 3;
+  text-transform: uppercase;
+  text-align: start;
+  letter-spacing: 0.08em;
+  overflow: auto;
+}
+.live-board header>.cell1{
+  float:left;
+}
+.live-board header>.cell2{
+  float:right;
+  font-family: fantasy;
+  font-weight: 100;
+  font-style: italic;
+  text-transform: CAPITALIZE;
+}
+.live-board .right header{
+  border-top-left-radius: 0px;
+  border-top-right-radius: 10px;
+  background-color: rgb(236, 236, 236);
+}
+.live-board .left .editor, .live-board .right .preview{
+  /* @exposed */
+  /* <header></header> default height calculated as 42px */
+  height: calc(100% - 42px); 
+}
+.live-board .left .editor{
+  position:relative;
+}
+.live-board pre[class*=language-].highlighting {
+  border-radius: 0px;
+  overflow: auto;
+  overflow-y: scroll;
+  /* tab-size: 1.5em; should be same as Textarea tag has*/
+  background: rgb(40, 44, 52);
+  /* font-size: 14px; should be same as Textarea tag has*/
+  /* line-height: 20px; should be same as Textarea tag has*/
+  word-break: break-word;
+}
+.live-board .right .preview {
+  overflow: auto;
+  overflow-y: scroll;
+}
+.live-board .right .preview iframe {
+  height:100%;
+  width:100%;
+}
+
+/* common css */
+
+.hidden{
+  display: none;
+}
+
+
